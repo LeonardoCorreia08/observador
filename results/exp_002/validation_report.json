@@ -1,0 +1,9 @@
+{
+    "experiment": "exp_002",
+    "dataset": "coco2017",
+    "images_found": 5000,
+    "annotated_images": 5000,
+    "object_annotations": 36781,
+    "categories_count": 80,
+    "validation_status": "SUCCESS"
+}

@@ -1,0 +1,16 @@
+{
+    "experiment": "exp_002",
+    "name": "run_detection",
+    "dataset": "coco2017",
+    "model": "yolo26n.pt",
+    "device": "cpu",
+    "device_name": "CPU",
+    "images_processed": 20,
+    "total_objects_detected": 89,
+    "average_objects_per_image": 4.45,
+    "total_inference_time_seconds": 11.6003,
+    "average_inference_time_seconds": 0.58,
+    "average_inference_fps": 1.72,
+    "confidence_threshold": 0.25,
+    "image_size": 640
+}

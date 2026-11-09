@@ -1,0 +1,55 @@
+
+project:
+  name: Observador
+  root: .
+
+dataset:
+  name: coco2017
+  root: data/raw/coco
+  image_dir: coco2017/val2017
+  annotation_dir: annotations
+  annotation_file: instances_val2017.json
+
+datasets:
+  mot17:
+    name: MOT17
+    root: data/raw/mot17
+    sequence: train/MOT17-02-DPM
+    image_dir: img1
+    annotation_dir: gt
+    annotation_file: gt.txt
+    sequence_info: seqinfo.ini
+
+experiments:
+  exp_001:
+    name: coco_validation
+    output_dir: results/exp_001
+
+  exp_002:
+    name: run_detection
+    output_dir: results/exp_002
+
+  exp_003:
+    name: object_tracking
+    output_dir: results/exp_003
+
+detection:
+  model: yolo26n.pt
+  confidence: 0.25
+  image_size: 640
+  max_images: 20
+  save_images: true
+
+tracking:
+  tracker: bytetrack.yaml
+  classes:
+    - 0
+  persist: true
+  save: true
+  save_txt: true
+  max_frames: 300
+  frame_stride: 1
+
+runtime:
+  device: auto
+  verbose: false

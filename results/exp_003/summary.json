@@ -1,0 +1,208 @@
+{
+    "experiment": "exp_003",
+    "name": "object_tracking",
+    "dataset": "MOT17",
+    "sequence": "MOT17-02-DPM",
+    "model": "yolo26n.pt",
+    "tracker": "bytetrack.yaml",
+    "device": "cpu",
+    "device_name": "CPU",
+    "frames_available": 600,
+    "frames_processed": 300,
+    "frame_stride": 1,
+    "ground_truth_annotations": 30003,
+    "total_detections": 1959,
+    "unique_track_ids": 46,
+    "average_detections_per_frame": 6.53,
+    "average_inference_time_seconds": 0.08839,
+    "total_processing_time_seconds": 45.78672,
+    "average_processing_fps": 6.552,
+    "video_output": "D:\\Github\\observador\\results\\exp_003\\tracking_output.mp4",
+    "evaluation_status": "NOT_EVALUATED",
+    "tracks": [
+        {
+            "track_id": 1,
+            "frames_tracked": 57
+        },
+        {
+            "track_id": 2,
+            "frames_tracked": 246
+        },
+        {
+            "track_id": 3,
+            "frames_tracked": 296
+        },
+        {
+            "track_id": 4,
+            "frames_tracked": 43
+        },
+        {
+            "track_id": 5,
+            "frames_tracked": 292
+        },
+        {
+            "track_id": 6,
+            "frames_tracked": 10
+        },
+        {
+            "track_id": 10,
+            "frames_tracked": 3
+        },
+        {
+            "track_id": 22,
+            "frames_tracked": 1
+        },
+        {
+            "track_id": 28,
+            "frames_tracked": 127
+        },
+        {
+            "track_id": 43,
+            "frames_tracked": 26
+        },
+        {
+            "track_id": 49,
+            "frames_tracked": 100
+        },
+        {
+            "track_id": 57,
+            "frames_tracked": 2
+        },
+        {
+            "track_id": 64,
+            "frames_tracked": 14
+        },
+        {
+            "track_id": 67,
+            "frames_tracked": 8
+        },
+        {
+            "track_id": 69,
+            "frames_tracked": 16
+        },
+        {
+            "track_id": 83,
+            "frames_tracked": 14
+        },
+        {
+            "track_id": 98,
+            "frames_tracked": 8
+        },
+        {
+            "track_id": 99,
+            "frames_tracked": 26
+        },
+        {
+            "track_id": 102,
+            "frames_tracked": 3
+        },
+        {
+            "track_id": 103,
+            "frames_tracked": 11
+        },
+        {
+            "track_id": 125,
+            "frames_tracked": 29
+        },
+        {
+            "track_id": 132,
+            "frames_tracked": 2
+        },
+        {
+            "track_id": 144,
+            "frames_tracked": 15
+        },
+        {
+            "track_id": 151,
+            "frames_tracked": 4
+        },
+        {
+            "track_id": 156,
+            "frames_tracked": 18
+        },
+        {
+            "track_id": 157,
+            "frames_tracked": 2
+        },
+        {
+            "track_id": 159,
+            "frames_tracked": 38
+        },
+        {
+            "track_id": 161,
+            "frames_tracked": 72
+        },
+        {
+            "track_id": 178,
+            "frames_tracked": 74
+        },
+        {
+            "track_id": 182,
+            "frames_tracked": 120
+        },
+        {
+            "track_id": 184,
+            "frames_tracked": 97
+        },
+        {
+            "track_id": 187,
+            "frames_tracked": 14
+        },
+        {
+            "track_id": 202,
+            "frames_tracked": 6
+        },
+        {
+            "track_id": 204,
+            "frames_tracked": 66
+        },
+        {
+            "track_id": 211,
+            "frames_tracked": 1
+        },
+        {
+            "track_id": 222,
+            "frames_tracked": 43
+        },
+        {
+            "track_id": 223,
+            "frames_tracked": 8
+        },
+        {
+            "track_id": 227,
+            "frames_tracked": 11
+        },
+        {
+            "track_id": 234,
+            "frames_tracked": 4
+        },
+        {
+            "track_id": 249,
+            "frames_tracked": 5
+        },
+        {
+            "track_id": 258,
+            "frames_tracked": 7
+        },
+        {
+            "track_id": 264,
+            "frames_tracked": 1
+        },
+        {
+            "track_id": 270,
+            "frames_tracked": 5
+        },
+        {
+            "track_id": 271,
+            "frames_tracked": 7
+        },
+        {
+            "track_id": 272,
+            "frames_tracked": 6
+        },
+        {
+            "track_id": 276,
+            "frames_tracked": 1
+        }
+    ]
+}

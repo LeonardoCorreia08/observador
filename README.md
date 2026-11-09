@@ -367,7 +367,40 @@ Essas questões orientarão as investigações e decisões arquiteturais.
 
 ## 11. Referências e trabalhos relacionados
 
-As referências serão organizadas conforme o desenvolvimento da pesquisa.
+O desenvolvimento do OBSERVADOR considera trabalhos científicos relacionados a visão computacional, rastreamento de múltiplos objetos (MOT), associação de múltiplas câmeras, inteligência espacial e representação de ambientes. As referências abaixo constituem uma base inicial de estudo, não uma declaração de que os mecanismos descritos já foram reproduzidos no projeto.
+
+### 11.1 Rastreamento e Percepção 
+1. **VisualByteTrack: Multi-Object Tracking by Associating Every Detection Box (2021)**
+* Autores: Yifu Zhang, Peize Sun, Yi Jiang e colaboradores.
+* Um método avançado de rastreamento de múltiplos objetos (MOT) que utiliza caixas de detecção de alta e baixa pontuação para manter trajetórias consistentes.
+* É uma referência crucial para o * componente "Observer Engine" do projeto, auxiliando no acompanhamento de movimentos ao longo do tempo e mitigando perdas por oclusão.
+* Publicação: European Conference on Computer Vision (ECCV).
+* DOI: https://doi.org/10.48550/arXiv.2110.06864   
+
+2. **YOLOv7: Trainable bag-of-freebies sets new state-of-the-art for real-time object detectors (2022)**
+* Autores: Chien-Yao Wang, Alexey Bochkovskiy e Hong-Yuan Mark Liao.Apresenta arquiteturas de detecção de objetos em tempo real que otimizam a precisão e o custo computacional.
+* Referência relevante para a construção do módulo "Vision Core", sendo a base da percepção visual para a identificação inicial dos elementos presentes no ambiente.
+* Publicação: IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR).
+* DOI: https://doi.org/10.48550/arXiv.2207.02696   
+
+### 11.2 Monitoramento Multicâmera e Inteligência Espacial
+3. **Features for Multi-Target Multi-Camera Tracking and Re-Identification (2018)**
+* Autores: Ergys Ristani e Carlo Tomasi.Trabalho fundamental que explora arquiteturas de Deep Learning para resolver o desafio de rastrear múltiplos alvos através de diferentes
+* câmeras simultaneamente (MTMCT) com foco em reidentificação (Re-ID).
+* É a base teórica direta para investigar e estruturar a camada "Camera Network".Publicação: IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR).
+* Link: https://openaccess.thecvf.com/content_cvpr_2018/papers/Ristani_Features_for_Multi-Target_CVPR_2018_paper.pdf   
+
+### 11.3 Compreensão Contextual e World Models
+4. **World Models (2018)Autores: David Ha e Jürgen Schmidhuber.**   
+* Artigo pioneiro sobre como sistemas baseados em inteligência artificial podem aprender representações espaciais e temporais comprimidas e não supervisionadas de seus ambientes.
+* É uma literatura essencial para os módulos "Memory System" e "World Model", embasando a transição de um sistema que apenas detecta objetos para um sistema que constrói uma representação estruturada e contextual do ambiente.Publicação: arXiv.
+* DOI: https://doi.org/10.48550/arXiv.1803.10122  
+
+5. **A Path Towards Autonomous Machine Intelligence (2022)**
+* Autor: Yann LeCun.Artigo de posicionamento que propõe arquiteturas preditivas (como a Joint Embedding Predictive Architecture) focadas no desenvolvimento de modelos de mundo (World Models) observando acontecimentos.
+* Fundamenta a visão de expansão de longo prazo do conceito "God's Eye" e os princípios de uma arquitetura de observação que desenvolve compreensão contextual integrando fluxos espaciais e temporais.
+Publicação: OpenReview.
+* DOI: https://doi.org/10.48550/arXiv.2206.14176 
 
 Áreas de investigação:
 

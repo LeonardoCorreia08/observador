@@ -1,201 +1,523 @@
-# TrafficVision AI
+<div align="center">
+  <img src="assets/vision.png" alt="OBSERVADOR Banner" width="280" />
+  <h1>OBSERVADOR</h1>
+  <p><strong>Omniscient Base for Surveillance, Environmental Recognition and Visual Analysis</strong></p>
+  <p><em>Plataforma Inteligente de Monitoramento Contínuo e Análise Visual</em></p>
+  <p>
+    <img src="https://img.shields.io/badge/Dom%C3%ADnio-Vis%C3%A3o%20Computacional-0052CC?style=flat-square" alt="Domínio" />
+    <img src="https://img.shields.io/badge/Framework-PyTorch%20%2B%20OpenCV-00875A?style=flat-square" alt="Framework" />
+    <img src="https://img.shields.io/badge/Processamento-Tempo%20Real-FF8B00?style=flat-square" alt="Processamento" />
+    <img src="https://img.shields.io/badge/Python-3.11-3776AB?style=flat-square" alt="Python" />
+    <img src="https://img.shields.io/badge/Status-Em%20Desenvolvimento-success?style=flat-square" alt="Status" />
+  </p>
+</div>
 
-Sistema de visão computacional para **detecção, classificação, rastreamento e contagem de veículos** em imagens e vídeos de tráfego rodoviário, utilizando Transfer Learning.
+---
 
-> **Estado do projeto:** estrutura inicial / protótipo em desenvolvimento. Nenhum resultado experimental é pré-preenchido. Métricas, pesos e conclusões só devem ser adicionados após execução real.
 
-## Objetivos
+# OBSERVADOR
 
-- Adaptar um detector pré-treinado ao domínio de tráfego rodoviário.
-- Comparar o modelo original (baseline) com o modelo após fine-tuning.
-- Detectar quatro categorias: carro, motocicleta, ônibus e caminhão.
-- Rastrear veículos entre frames e evitar contagens duplicadas.
-- Avaliar qualidade, velocidade e limitações do sistema.
-- Manter experimentos reproduzíveis.
+**Sistema Inteligente de Percepção e Observação do Ambiente**
 
-## Abordagem
+*Da percepção visual local à construção de uma inteligência capaz de observar, interpretar e compreender o mundo.*
 
-1. **Baseline:** executar um modelo YOLO pré-treinado sem fine-tuning.
-2. **Transfer Learning:** ajustar o modelo com um dataset anotado de tráfego.
-3. **Tracking:** associar detecções entre frames com ByteTrack.
-4. **Counting:** contar cada ID uma única vez ao cruzar uma linha virtual.
-5. **Evaluation:** avaliar detecção e contagem em dados não utilizados no treino.
+![Status](https://img.shields.io/badge/Status-Em%20desenvolvimento-yellow)
+![Project](https://img.shields.io/badge/Project-Research%20%26%20Development-blue)
+![Version](https://img.shields.io/badge/Version-0.1.0-lightgrey)
 
-A implementação inicial usa Ultralytics YOLO. O rastreamento usa o tracker ByteTrack integrado à biblioteca. As classes e os IDs devem ser conferidos com o arquivo de configuração do dataset.
+---
 
-## Classes do projeto
+## 1. Sobre o projeto
 
-| Classe interna | Nome esperado no dataset |
+**Observador** é um projeto de pesquisa e desenvolvimento voltado à construção de um sistema inteligente de percepção ambiental, inicialmente baseado em visão computacional e análise de imagens e vídeos provenientes de câmeras.
+
+A proposta consiste em desenvolver uma arquitetura capaz de observar ambientes, identificar elementos presentes, acompanhar movimentos, reconhecer eventos e transformar informações visuais em dados estruturados.
+
+Em sua concepção inicial, o projeto concentra-se na percepção visual por câmeras, com possibilidades de expansão para integração de múltiplos dispositivos, sensores, fontes geoespaciais e outras modalidades de informação.
+
+A visão de longo prazo é investigar a construção de um observador inteligente capaz de desenvolver uma representação contextual do ambiente, relacionando informações espaciais, temporais e visuais.
+
+O projeto também considera, como direção futura, o conceito de **God's Eye (Olho de Deus)**: uma arquitetura abrangente de observação e inteligência ambiental.
+
+> **Estado atual:** Projeto em fase inicial de concepção e estruturação. Os componentes e funcionalidades apresentados neste documento representam objetivos arquiteturais e possibilidades de investigação, não necessariamente implementações existentes.
+
+## 2. Motivação
+
+### Por que este projeto existe?
+
+Sistemas convencionais de monitoramento visual geralmente são utilizados para capturar imagens, gravar vídeos ou identificar determinados objetos.
+
+Entretanto, observar um ambiente envolve muito mais do que detectar objetos isoladamente.
+
+É necessário investigar como um sistema pode interpretar o que está acontecendo, acompanhar acontecimentos ao longo do tempo, relacionar informações provenientes de diferentes fontes e construir uma compreensão contextual do ambiente observado.
+
+O Observador nasce dessa proposta: explorar a transição entre a simples captura de imagens e uma arquitetura de percepção inteligente.
+
+### Qual é a ideia?
+
+Desenvolver progressivamente um sistema que seja capaz de:
+
+- Capturar e processar informações visuais.
+- Identificar objetos e elementos presentes no ambiente.
+- Acompanhar objetos e movimentos ao longo do tempo.
+- Reconhecer e interpretar acontecimentos.
+- Relacionar informações provenientes de diferentes câmeras.
+- Integrar dados visuais, espaciais e sensoriais.
+- Construir memória contextual dos acontecimentos.
+- Desenvolver uma representação dinâmica do ambiente observado.
+
+### O que se pretende investigar?
+
+- Como construir uma arquitetura modular de percepção visual?
+- Como acompanhar objetos e acontecimentos em diferentes câmeras?
+- Como relacionar informações visuais, espaciais e temporais?
+- Como integrar diferentes sensores e fontes de informação?
+- Como desenvolver memória e compreensão contextual do ambiente?
+- Como evoluir de um sistema de monitoramento para uma arquitetura de observação inteligente?
+
+## 3. Visão e objetivos
+
+A visão de longo prazo é desenvolver uma arquitetura de observação inteligente capaz de perceber, interpretar e relacionar informações do ambiente, evoluindo de uma aplicação de visão computacional para um sistema integrado de percepção ambiental.
+
+Os objetivos iniciais incluem:
+
+- Desenvolver um núcleo de visão computacional.
+- Implementar detecção e classificação de objetos.
+- Investigar técnicas de rastreamento de objetos.
+- Processar imagens e fluxos de vídeo provenientes de câmeras.
+- Investigar associação de informações entre diferentes pontos de observação.
+- Desenvolver mecanismos de identificação e registro de eventos.
+- Investigar integração com sensores e dados geoespaciais.
+- Estudar mecanismos de memória e interpretação contextual.
+- Explorar a construção de uma representação dinâmica do ambiente.
+
+Esses objetivos representam a direção da pesquisa e não necessariamente funcionalidades já implementadas.
+
+## 4. Fundamentos e conceitos
+
+O projeto considera diferentes áreas de conhecimento:
+
+| Conceito | Aplicação pretendida |
 |---|---|
-| `car` | carro / car |
-| `motorcycle` | motocicleta / motorcycle |
-| `bus` | ônibus / bus |
-| `truck` | caminhão / truck |
+| Visão Computacional | Interpretação de imagens e vídeos. |
+| Deep Learning | Aprendizado de características visuais. |
+| Detecção de Objetos | Identificação de elementos no ambiente. |
+| Object Tracking | Acompanhamento de objetos ao longo do tempo. |
+| Multi-Object Tracking | Rastreamento simultâneo de múltiplos objetos. |
+| Multi-Camera Systems | Associação de observações entre câmeras. |
+| Sensor Fusion | Integração de diferentes fontes sensoriais. |
+| Inteligência Espacial | Compreensão de posições e relações espaciais. |
+| Event Detection | Identificação de acontecimentos relevantes. |
+| Temporal Analysis | Análise da evolução dos acontecimentos. |
+| Artificial Intelligence | Interpretação e análise contextual. |
+| World Modeling | Representação estruturada do ambiente observado. |
 
-A conversão dos nomes originais para os nomes internos deve ser feita na preparação do dataset. Não misture categorias incompatíveis sem documentar a decisão.
+Referências científicas e técnicas serão incorporadas conforme a evolução da pesquisa.
 
-## Estrutura
+## 5. Arquitetura conceitual
+
+A arquitetura será desenvolvida de maneira modular, permitindo a evolução independente dos componentes e sua integração progressiva.
+
+### 5.1 Vision Core
+
+Núcleo responsável pela percepção visual.
+
+Possíveis funcionalidades:
+
+- Captura e processamento de imagens.
+- Processamento de vídeos e streams.
+- Detecção e classificação de objetos.
+- Segmentação e análise visual.
+- Extração de características.
+- Reconhecimento de padrões.
+
+### 5.2 Observer Engine
+
+Componente responsável pela observação contínua e acompanhamento dos elementos identificados.
+
+Possíveis funcionalidades:
+
+- Rastreamento de objetos.
+- Identificação de trajetórias.
+- Associação temporal de observações.
+- Análise de movimentação.
+- Identificação de eventos.
+- Monitoramento de regiões de interesse.
+
+### 5.3 Camera Network
+
+Camada responsável pela integração das fontes de observação visual.
+
+Possíveis funcionalidades:
+
+- Gerenciamento de múltiplas câmeras.
+- Identificação de pontos de observação.
+- Sincronização temporal.
+- Associação de informações entre câmeras.
+- Organização dos fluxos de vídeo.
+- Expansão para redes distribuídas de observação.
+
+### 5.4 Spatial Intelligence
+
+Componente destinado à interpretação espacial do ambiente.
+
+Possíveis funcionalidades:
+
+- Localização de objetos.
+- Construção de relações espaciais.
+- Análise de trajetórias.
+- Integração com mapas.
+- Referenciamento geográfico.
+- Representação de ambientes observados.
+
+### 5.5 Event Intelligence
+
+Camada destinada à interpretação dos acontecimentos identificados.
+
+Possíveis funcionalidades:
+
+- Identificação de eventos relevantes.
+- Correlação de observações.
+- Análise de comportamentos e padrões.
+- Identificação de anomalias.
+- Organização cronológica dos acontecimentos.
+- Produção de informações contextualizadas.
+
+### 5.6 Memory System
+
+Componente destinado ao armazenamento e recuperação de informações observadas.
+
+Possíveis funcionalidades:
+
+- Histórico de observações.
+- Registro de eventos.
+- Memória temporal.
+- Recuperação contextual de informações.
+- Associação entre eventos e entidades.
+- Construção de histórico de ambientes.
+
+### 5.7 World Model
+
+Camada conceitual destinada à construção de uma representação dinâmica do ambiente.
+
+Possíveis funcionalidades:
+
+- Representação de entidades e objetos.
+- Relações espaciais e temporais.
+- Associação de acontecimentos.
+- Atualização do estado do ambiente.
+- Integração de informações provenientes de diferentes fontes.
+
+### 5.8 God's Eye — Visão de longo prazo
+
+God's Eye representa a direção conceitual de expansão do Observador para uma arquitetura abrangente de percepção ambiental.
+
+A proposta é investigar a integração de diferentes fontes de informação:
+
+- Câmeras terrestres.
+- Sistemas de monitoramento.
+- Sensores ambientais.
+- Satélites.
+- Dados geoespaciais.
+- Sistemas de localização.
+- Outras fontes de observação e informação.
+
+O objetivo de longo prazo é investigar como essas fontes podem contribuir para uma representação integrada e contextualizada do mundo.
+
+> God's Eye não representa uma funcionalidade atualmente implementada, mas uma visão futura de expansão do projeto.
+
+## 6. Estado atual do desenvolvimento
+
+Esta seção deverá refletir a situação real dos componentes.
+
+| Componente | Estado | Observações |
+|---|---|---|
+| Arquitetura conceitual | Em desenvolvimento | Definição dos módulos e responsabilidades. |
+| Vision Core | Planejado | Núcleo inicial de percepção visual. |
+| Observer Engine | Planejado | Rastreamento e acompanhamento. |
+| Camera Network | Planejado | Integração de câmeras. |
+| Spatial Intelligence | Planejado | Compreensão espacial. |
+| Event Intelligence | Planejado | Identificação e correlação de eventos. |
+| Memory System | Planejado | Memória das observações. |
+| World Model | Planejado | Representação dinâmica do ambiente. |
+| God's Eye | Visão futura | Expansão da capacidade de observação. |
+
+### Classificação dos estados
+
+- **Planejado:** ainda não implementado.
+- **Em desenvolvimento:** implementação em andamento.
+- **Implementado:** código ou componente existente.
+- **Em avaliação:** implementação em processo de testes.
+- **Validado:** resultado confirmado em condições experimentais documentadas.
+- **Descontinuado:** funcionalidade abandonada ou substituída.
+
+A classificação deverá acompanhar o estado real do código e dos experimentos.
+
+## 7. Roadmap
+
+### Fase 1 — Fundamentos e percepção visual
+
+- Definir a arquitetura inicial.
+- Estruturar o repositório.
+- Preparar o ambiente de desenvolvimento.
+- Investigar modelos de detecção de objetos.
+- Implementar os primeiros testes de processamento de imagens.
+- Investigar processamento de vídeos.
+
+### Fase 2 — Observação e rastreamento
+
+- Integrar detecção e rastreamento.
+- Investigar acompanhamento de múltiplos objetos.
+- Desenvolver registro de trajetórias.
+- Implementar identificação de eventos básicos.
+- Criar mecanismos de armazenamento das observações.
+
+### Fase 3 — Observação integrada
+
+- Investigar integração de múltiplas câmeras.
+- Estudar associação de objetos entre pontos de observação.
+- Desenvolver sincronização temporal.
+- Investigar integração de sensores.
+- Desenvolver mecanismos de correlação de eventos.
+
+### Fase 4 — Inteligência espacial e contextual
+
+- Investigar localização e representação espacial.
+- Integrar informações geográficas.
+- Desenvolver mecanismos de memória.
+- Investigar interpretação contextual.
+- Construir modelos de representação do ambiente.
+
+### Fase 5 — World Model
+
+- Integrar informações visuais e espaciais.
+- Investigar representação dinâmica de entidades.
+- Desenvolver mecanismos de atualização de estados.
+- Relacionar acontecimentos ao longo do tempo.
+- Avaliar consistência das informações observadas.
+
+### Fase 6 — God's Eye
+
+- Investigar integração de fontes distribuídas de observação.
+- Estudar integração com dados de satélites.
+- Investigar integração de sensores ambientais.
+- Desenvolver uma arquitetura de percepção abrangente.
+- Explorar a construção de uma representação integrada do mundo.
+
+As fases representam uma direção de pesquisa e não possuem prazos ou resultados garantidos.
+
+## 8. Tecnologias e ferramentas
+
+As tecnologias serão selecionadas conforme os requisitos experimentais e a evolução arquitetural.
+
+| Tecnologia | Finalidade | Situação |
+|---|---|---|
+| Python | Desenvolvimento e experimentação | Em avaliação |
+| OpenCV | Processamento de imagens e vídeos | Em avaliação |
+| PyTorch | Desenvolvimento e treinamento de modelos | Em avaliação |
+| Ultralytics YOLO | Detecção de objetos | Em avaliação |
+| ByteTrack | Rastreamento de objetos | Em avaliação |
+| ONNX | Interoperabilidade de modelos | Planejada |
+| TensorRT | Otimização de inferência | Planejada |
+| PostgreSQL | Armazenamento estruturado | Em avaliação |
+| PostGIS | Informações geoespaciais | Planejada |
+| Docker | Reprodutibilidade e ambientes | Em avaliação |
+| FastAPI | Serviços e comunicação entre módulos | Planejada |
+
+A presença de uma tecnologia nesta lista não significa que ela já esteja integrada ao projeto.
+
+## 9. Experimentos e resultados
+
+Os experimentos serão documentados de maneira independente, permitindo acompanhar a evolução técnica e científica do projeto.
+
+| Experimento | Objetivo | Estado | Resultado |
+|---|---|---|---|
+| EXP-001 | Detecção de objetos | Planejado | Pendente |
+| EXP-002 | Classificação de objetos | Planejado | Pendente |
+| EXP-003 | Rastreamento de objetos | Planejado | Pendente |
+| EXP-004 | Processamento de múltiplas câmeras | Planejado | Pendente |
+| EXP-005 | Identificação de eventos | Planejado | Pendente |
+| EXP-006 | Integração de informações espaciais | Planejado | Pendente |
+| EXP-007 | Construção de memória contextual | Planejado | Pendente |
+
+Cada experimento deverá registrar:
+
+- Objetivo e hipótese.
+- Dataset utilizado e sua origem.
+- Configuração experimental.
+- Arquitetura e versão dos modelos.
+- Ambiente de execução.
+- Parâmetros utilizados.
+- Métricas e resultados.
+- Limitações identificadas.
+- Próximos passos.
+
+Nenhum resultado deverá ser considerado validado sem evidências experimentais documentadas.
+
+## 10. Desafios e questões em aberto
+
+Algumas questões técnicas e científicas importantes:
+
+- Como manter a identidade de um objeto observado por diferentes câmeras?
+- Como reduzir erros de detecção e rastreamento?
+- Como lidar com oclusões e mudanças de iluminação?
+- Como sincronizar observações provenientes de diferentes dispositivos?
+- Como diferenciar eventos relevantes de acontecimentos comuns?
+- Como construir memória contextual sem acumular informações inconsistentes?
+- Como representar ambientes dinâmicos?
+- Como integrar diferentes fontes de informação sem perder a confiabilidade?
+- Como desenvolver uma arquitetura escalável e distribuída?
+- Como garantir privacidade, segurança e uso responsável das informações observadas?
+
+Essas questões orientarão as investigações e decisões arquiteturais.
+
+## 11. Referências e trabalhos relacionados
+
+As referências serão organizadas conforme o desenvolvimento da pesquisa.
+
+Áreas de investigação:
+
+1. Computer Vision.
+2. Object Detection.
+3. Multi-Object Tracking.
+4. Multi-Camera Tracking.
+5. Sensor Fusion.
+6. Visual Perception.
+7. Spatial Intelligence.
+8. Event-Based Intelligence.
+9. World Models.
+10. Distributed Observation Systems.
+
+Projetos, artigos científicos e publicações relevantes serão documentados conforme forem estudados e utilizados.
+
+## 12. Estrutura do repositório
+
+Estrutura inicial proposta:
 
 ```text
-TrafficVision-AI/
-├── configs/
-│   ├── dataset.example.yaml
-│   └── training.example.yaml
-├── data/
-│   ├── raw/.gitkeep
-│   ├── processed/.gitkeep
-│   └── README.md
-├── docs/
-│   ├── architecture.md
-│   ├── data_card.md
-│   ├── experiment_logs.md
-│   ├── methodology.md
-│   └── limitations.md
-├── experiments/
-│   └── README.md
-├── models/
-│   └── README.md
-├── notebooks/
-│   └── README.md
-├── results/
-│   ├── metrics/.gitkeep
-│   ├── predictions/.gitkeep
-│   └── README.md
-├── scripts/
-│   ├── evaluate.py
-│   ├── predict.py
-│   ├── track_count.py
-│   └── train.py
-├── src/trafficvision/
-│   ├── __init__.py
-│   ├── config.py
-│   └── counting.py
+OBSERVADOR/
+│
+├── README.md
+├── LICENSE
 ├── .gitignore
-├── requirements.txt
-└── README.md
+│
+├── docs/
+│   ├── VISION.md
+│   ├── ARCHITECTURE.md
+│   ├── ROADMAP.md
+│   ├── RESEARCH_NOTES.md
+│   ├── EXPERIMENTS.md
+│   └── DATA_POLICY.md
+│
+├── src/
+│   ├── vision/
+│   ├── observer/
+│   ├── cameras/
+│   ├── tracking/
+│   ├── spatial/
+│   ├── events/
+│   ├── memory/
+│   └── world_model/
+│
+├── experiments/
+│   ├── detection/
+│   ├── tracking/
+│   ├── multi_camera/
+│   └── evaluation/
+│
+├── tests/
+│
+├── configs/
+│
+├── datasets/
+│
+├── models/
+│
+├── results/
+│
+├── scripts/
+│
+└── assets/
 ```
 
-## Requisitos
+A estrutura poderá ser modificada conforme os componentes forem implementados.
 
-- Python 3.10 ou 3.11 (recomendado para esta estrutura inicial).
-- PyTorch compatível com o hardware e a versão instalada do Ultralytics.
-- GPU NVIDIA é recomendada para treinamento, mas não obrigatória para inferência.
-- Dataset com imagens e anotações no formato YOLO.
+## 13. Instalação e execução
 
-Instalação:
+Esta seção será preenchida quando existir uma versão executável e testada do projeto.
+
+### Requisitos
+
+- Python 3.10 ou superior, sujeito à compatibilidade das dependências.
+- Ambiente de desenvolvimento configurado.
+- Recursos computacionais compatíveis com os modelos utilizados.
+- Câmera ou arquivos de imagem e vídeo para os experimentos.
+
+### Instalação
 
 ```bash
+# Clonar o repositório
+git clone [URL_DO_REPOSITORIO]
+
+# Entrar no diretório
+cd Observador
+
+# Criar ambiente virtual
 python -m venv .venv
 
-# Windows
+# Ativar no Windows
 .venv\Scripts\activate
 
-# Linux/macOS
+# Ativar no Linux
 source .venv/bin/activate
 
-python -m pip install --upgrade pip
+# Instalar dependências
 pip install -r requirements.txt
 ```
 
-Para ambientes com GPU, instale a versão do PyTorch apropriada para sua versão de CUDA seguindo a página oficial do PyTorch antes de instalar/ajustar o restante das dependências.
+### Execução
 
-## Dataset
+Os comandos de execução serão adicionados após a implementação dos primeiros componentes.
 
-O projeto não inclui imagens ou rótulos de terceiros. Escolha um dataset adequado, leia os termos de uso e registre a versão e a origem em `docs/data_card.md`.
+> Os comandos de instalação são uma referência inicial. A instalação e a execução deverão ser testadas antes de serem consideradas instruções oficiais.
 
-O formato esperado pelo YOLO:
+## 14. Princípios do projeto
 
-```text
-dataset/
-├── images/
-│   ├── train/
-│   ├── val/
-│   └── test/
-└── labels/
-    ├── train/
-    ├── val/
-    └── test/
-```
+O desenvolvimento seguirá os seguintes princípios:
 
-Cada imagem deve possuir um `.txt` correspondente. Cada linha do rótulo deve seguir:
+- **Percepção antes da interpretação:** construir uma base confiável de observação.
+- **Modularidade:** permitir evolução independente dos componentes.
+- **Transparência:** diferenciar objetivos, implementações e resultados.
+- **Experimentação:** avaliar hipóteses por meio de testes controlados.
+- **Reprodutibilidade:** documentar ambientes, parâmetros e resultados.
+- **Escalabilidade:** considerar a expansão para múltiplas fontes de informação.
+- **Contextualização:** relacionar observações ao espaço e ao tempo.
+- **Privacidade:** respeitar direitos, autorizações e limites legais no tratamento de imagens e informações.
+- **Confiabilidade:** registrar incertezas, limitações e possíveis erros.
+- **Evolução contínua:** permitir revisões técnicas e arquiteturais.
 
-```text
-class_id x_center y_center width height
-```
+## 15. Contribuições
 
-As coordenadas devem estar normalizadas entre 0 e 1. Os IDs das classes precisam corresponder exatamente à ordem declarada no YAML.
+O projeto encontra-se em fase de desenvolvimento.
 
-**Importante sobre vídeos:** se o dataset for extraído de vídeos, separe treino, validação e teste por vídeo ou sequência, nunca distribuindo frames vizinhos aleatoriamente entre os conjuntos. Isso reduz o risco de data leakage.
+Sugestões, discussões técnicas, propostas de arquitetura e contribuições relacionadas à visão computacional, inteligência artificial, percepção ambiental e integração de sensores são bem-vindas.
 
-Copie `configs/dataset.example.yaml` para `configs/dataset.yaml` e ajuste os caminhos locais. O arquivo local `dataset.yaml` está no `.gitignore` para evitar publicar caminhos privados.
+As orientações para contribuição poderão ser documentadas futuramente em `CONTRIBUTING.md`.
 
-## Execução
+## 16. Licença
 
-### 1. Baseline / inferência com pesos pré-treinados
+A licença será definida no arquivo `LICENSE`.
 
-```bash
-python scripts/predict.py --weights yolo11n.pt --source caminho/para/video.mp4
-```
+Consulte esse arquivo para conhecer as condições de utilização, modificação e distribuição do projeto.
 
-### 2. Fine-tuning
+---
 
-```bash
-python scripts/train.py --data configs/dataset.yaml --weights yolo11n.pt --epochs 100 --imgsz 640 --batch 16
-```
+<div align="center">
 
-Ajuste `--batch` conforme a memória disponível. O comando usa pesos pré-treinados e inicia o treinamento no dataset indicado.
+# OBSERVADOR
 
-### 3. Avaliação
+**Da visão à compreensão do mundo.**
 
-```bash
-python scripts/evaluate.py --weights runs/detect/train/weights/best.pt --data configs/dataset.yaml
-```
+*Perception • Observation • Intelligence • World Modeling*
 
-### 4. Rastreamento e contagem
-
-```bash
-python scripts/track_count.py --weights runs/detect/train/weights/best.pt --source caminho/para/video.mp4 --line 0.5
-```
-
-`--line 0.5` define a linha horizontal no meio da imagem, em coordenada relativa (50% da altura). A contagem é incrementada quando um ID cruza essa linha na direção configurada.
-
-## Métricas a reportar
-
-- Precision, Recall e mAP@0.5.
-- mAP@0.5:0.95.
-- FPS ou tempo médio por frame.
-- Erro absoluto e percentual da contagem, comparando com uma contagem manual de referência.
-- Resultados por classe e por condição (dia/noite, oclusão, distância), quando houver amostras suficientes.
-
-Não use apenas accuracy para avaliar detecção. Registe também o limiar de confiança, IoU, resolução, hardware e versão do modelo.
-
-## Reprodutibilidade
-
-Para cada execução, guardar:
-
-- commit Git do código;
-- versão/hash do dataset;
-- versão do Python, PyTorch e Ultralytics;
-- modelo inicial e origem dos pesos;
-- seed, épocas, batch, resolução e learning rate;
-- hardware e configurações;
-- métricas e logs;
-- pesos finais ou referência ao armazenamento externo.
-
-Use `docs/experiment_logs.md` como modelo de registo. Não preencha números estimados.
-
-## Limitações conhecidas
-
-- A contagem por cruzamento de linha depende da qualidade do tracking.
-- Oclusões, veículos muito próximos, mudanças bruscas de câmera e baixa iluminação podem causar perda ou troca de IDs.
-- Um bom mAP não garante contagem correta.
-- O tracker não substitui uma avaliação de contagem com ground truth.
-- A configuração inicial é um ponto de partida e precisa ser validada no dataset escolhido.
-
-## Ética, privacidade e licenças
-
-Use apenas imagens e vídeos que tenha autorização para processar. Evite publicar rostos, matrículas, dados pessoais ou vídeos de câmeras privadas. Verifique a licença do dataset, dos pesos e das bibliotecas antes de redistribuir qualquer artefato.
-
-## Licença
-
-Defina uma licença para este repositório depois de confirmar os direitos sobre o código, os dados e os pesos utilizados. A licença do código não concede automaticamente direitos sobre datasets ou modelos de terceiros.
+</div>

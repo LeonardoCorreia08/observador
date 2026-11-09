@@ -1,0 +1,12 @@
+# Copie para configs/dataset.yaml e ajuste os caminhos.
+# Os caminhos podem ser absolutos ou relativos ao diretório de execução.
+path: ../data/processed/traffic_dataset
+train: images/train
+val: images/val
+test: images/test
+
+names:
+  0: car
+  1: motorcycle
+  2: bus
+  3: truck

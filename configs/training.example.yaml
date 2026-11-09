@@ -1,0 +1,11 @@
+# Configuração de referência. Confirme compatibilidade com o modelo/dataset.
+model: yolo11n.pt
+epochs: 100
+imgsz: 640
+batch: 16
+device: auto
+workers: 8
+seed: 42
+patience: 20
+project: runs/trafficvision
+name: transfer_learning

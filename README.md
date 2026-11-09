@@ -1,9 +1,15 @@
 <div align="center">
   <img src="assets/vision.png" alt="OBSERVADOR Banner" width="280" />
+  
   <h1>OBSERVADOR</h1>
-  <p><strong>Omniscient Base for Surveillance, Environmental Recognition and Visual Analysis</strong></p>
-  <p><em>Plataforma Inteligente de Monitoramento Contínuo e Análise Visual</em></p>
+  
+  
+  <em>Plataforma Inteligente de Monitoramento Contínuo e Análise Visual</em></p>
+  
+  <p><em>"Da percepção visual local à construção de uma inteligência capaz de observar, interpretar e compreender o mundo."</em></p>
+
   <p>
+    <img src="https://img.shields.io/badge/Version-0.1.0-lightgrey?style=flat-square" alt="Version" />
     <img src="https://img.shields.io/badge/Dom%C3%ADnio-Vis%C3%A3o%20Computacional-0052CC?style=flat-square" alt="Domínio" />
     <img src="https://img.shields.io/badge/Framework-PyTorch%20%2B%20OpenCV-00875A?style=flat-square" alt="Framework" />
     <img src="https://img.shields.io/badge/Processamento-Tempo%20Real-FF8B00?style=flat-square" alt="Processamento" />
@@ -14,18 +20,6 @@
 
 ---
 
-
-# OBSERVADOR
-
-**Sistema Inteligente de Percepção e Observação do Ambiente**
-
-*Da percepção visual local à construção de uma inteligência capaz de observar, interpretar e compreender o mundo.*
-
-![Status](https://img.shields.io/badge/Status-Em%20desenvolvimento-yellow)
-![Project](https://img.shields.io/badge/Project-Research%20%26%20Development-blue)
-![Version](https://img.shields.io/badge/Version-0.1.0-lightgrey)
-
----
 
 ## 1. Sobre o projeto
 

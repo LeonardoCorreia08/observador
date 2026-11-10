@@ -9,3 +9,4 @@ pycocotools
 torch
 torchvision
 trackeval
+cap-from-youtube

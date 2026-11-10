@@ -53,3 +53,18 @@ tracking:
 runtime:
   device: auto
   verbose: false
+
+evaluation:
+  exp_003:
+    sequence_name: MOT17-02-DPM
+    tracker_name: Observador
+    max_frames: 300
+    ground_truth_sequence: data/raw/mot17/train/MOT17-02-DPM
+    prediction_file: results/exp_003/tracking_results.csv
+    output_dir: results/exp_003/evaluation
+    benchmark: MOT17
+    do_preproc: true
+    metrics:
+      - HOTA
+      - CLEAR
+      - Identity

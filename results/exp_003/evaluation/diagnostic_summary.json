@@ -1,0 +1,11 @@
+{
+  "frames_evaluated": 300,
+  "ground_truth_valid_pedestrian_annotations": 8668,
+  "ground_truth_unique_pedestrian_ids": 42,
+  "prediction_count": 1959,
+  "prediction_unique_track_ids": 46,
+  "ground_truth_average_per_frame": 28.8933,
+  "prediction_average_per_frame": 6.53,
+  "frames_without_predictions": 0,
+  "note": "Contagens diagnósticas, não TP/FP/FN. Métricas calculadas pelo TrackEval."
+}

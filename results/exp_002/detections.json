@@ -1,7 +1,7 @@
 [
     {
         "image": "000000000139.jpg",
-        "inference_time_seconds": 9.0871,
+        "inference_time_seconds": 9.1195,
         "objects_detected": 13,
         "detections": [
             {
@@ -151,7 +151,7 @@
     },
     {
         "image": "000000000285.jpg",
-        "inference_time_seconds": 0.2073,
+        "inference_time_seconds": 0.2607,
         "objects_detected": 1,
         "detections": [
             {
@@ -169,7 +169,7 @@
     },
     {
         "image": "000000000632.jpg",
-        "inference_time_seconds": 0.1842,
+        "inference_time_seconds": 0.6697,
         "objects_detected": 4,
         "detections": [
             {
@@ -220,7 +220,7 @@
     },
     {
         "image": "000000000724.jpg",
-        "inference_time_seconds": 0.1753,
+        "inference_time_seconds": 0.5097,
         "objects_detected": 2,
         "detections": [
             {
@@ -249,7 +249,7 @@
     },
     {
         "image": "000000000776.jpg",
-        "inference_time_seconds": 0.1483,
+        "inference_time_seconds": 0.3634,
         "objects_detected": 2,
         "detections": [
             {
@@ -278,7 +278,7 @@
     },
     {
         "image": "000000000785.jpg",
-        "inference_time_seconds": 0.1748,
+        "inference_time_seconds": 0.2006,
         "objects_detected": 2,
         "detections": [
             {
@@ -307,7 +307,7 @@
     },
     {
         "image": "000000000802.jpg",
-        "inference_time_seconds": 0.0946,
+        "inference_time_seconds": 0.1675,
         "objects_detected": 2,
         "detections": [
             {
@@ -336,7 +336,7 @@
     },
     {
         "image": "000000000872.jpg",
-        "inference_time_seconds": 0.1782,
+        "inference_time_seconds": 0.4333,
         "objects_detected": 3,
         "detections": [
             {
@@ -376,7 +376,7 @@
     },
     {
         "image": "000000000885.jpg",
-        "inference_time_seconds": 0.0869,
+        "inference_time_seconds": 0.1993,
         "objects_detected": 4,
         "detections": [
             {
@@ -427,7 +427,7 @@
     },
     {
         "image": "000000001000.jpg",
-        "inference_time_seconds": 0.1675,
+        "inference_time_seconds": 0.2617,
         "objects_detected": 13,
         "detections": [
             {
@@ -577,7 +577,7 @@
     },
     {
         "image": "000000001268.jpg",
-        "inference_time_seconds": 0.0747,
+        "inference_time_seconds": 0.2113,
         "objects_detected": 6,
         "detections": [
             {
@@ -650,7 +650,7 @@
     },
     {
         "image": "000000001296.jpg",
-        "inference_time_seconds": 0.0926,
+        "inference_time_seconds": 0.2264,
         "objects_detected": 3,
         "detections": [
             {
@@ -690,7 +690,7 @@
     },
     {
         "image": "000000001353.jpg",
-        "inference_time_seconds": 0.0752,
+        "inference_time_seconds": 0.3763,
         "objects_detected": 7,
         "detections": [
             {
@@ -774,7 +774,7 @@
     },
     {
         "image": "000000001425.jpg",
-        "inference_time_seconds": 0.0722,
+        "inference_time_seconds": 0.3616,
         "objects_detected": 3,
         "detections": [
             {
@@ -782,7 +782,7 @@
                 "class_name": "cake",
                 "confidence": 0.7006,
                 "bbox_xyxy": [
-                    34.26,
+                    34.25,
                     175.89,
                     440.9,
                     396.65
@@ -814,7 +814,7 @@
     },
     {
         "image": "000000001490.jpg",
-        "inference_time_seconds": 0.1503,
+        "inference_time_seconds": 0.2048,
         "objects_detected": 1,
         "detections": [
             {
@@ -832,7 +832,7 @@
     },
     {
         "image": "000000001503.jpg",
-        "inference_time_seconds": 0.0769,
+        "inference_time_seconds": 0.2201,
         "objects_detected": 5,
         "detections": [
             {
@@ -894,7 +894,7 @@
     },
     {
         "image": "000000001532.jpg",
-        "inference_time_seconds": 0.087,
+        "inference_time_seconds": 0.3413,
         "objects_detected": 8,
         "detections": [
             {
@@ -989,7 +989,7 @@
     },
     {
         "image": "000000001584.jpg",
-        "inference_time_seconds": 0.232,
+        "inference_time_seconds": 0.3904,
         "objects_detected": 6,
         "detections": [
             {
@@ -1062,7 +1062,7 @@
     },
     {
         "image": "000000001675.jpg",
-        "inference_time_seconds": 0.1003,
+        "inference_time_seconds": 0.1773,
         "objects_detected": 2,
         "detections": [
             {
@@ -1091,7 +1091,7 @@
     },
     {
         "image": "000000001761.jpg",
-        "inference_time_seconds": 0.1348,
+        "inference_time_seconds": 0.2081,
         "objects_detected": 2,
         "detections": [
             {

@@ -422,49 +422,75 @@ Projetos, artigos científicos e publicações relevantes serão documentados co
 Estrutura inicial proposta:
 
 ```text
-OBSERVADOR/
-│
-├── README.md
-├── LICENSE
-├── .gitignore
-│
-├── docs/
-│   ├── VISION.md
-│   ├── ARCHITECTURE.md
-│   ├── ROADMAP.md
-│   ├── RESEARCH_NOTES.md
-│   ├── EXPERIMENTS.md
-│   └── DATA_POLICY.md
-│
-├── src/
-│   ├── vision/
-│   ├── observer/
-│   ├── cameras/
-│   ├── tracking/
-│   ├── spatial/
-│   ├── events/
-│   ├── memory/
-│   └── world_model/
-│
-├── experiments/
-│   ├── detection/
-│   ├── tracking/
-│   ├── multi_camera/
-│   └── evaluation/
-│
-├── tests/
-│
+observador/
+├── assets/
+│   └── vision.png
 ├── configs/
-│
-├── datasets/
-│
+│   ├── config.yaml
+│   ├── dataset.example.yaml
+│   └── training.example.yaml
+├── data/
+│   ├── annotations/
+│   ├── processed/
+│   ├── raw/
+│   ├── splits/
+│   └── README.md
+├── docs/
+│   ├── architecture.md
+│   ├── data_card.md
+│   ├── experiment_logs.md
+│   ├── limitations.md
+│   └── methodology.md
+├── experiments/
+│   ├── exp_001_detection/
+│   │   └── validate_coco.py
+│   ├── exp_002_detection/
+│   │   ├── __pycache__/
+│   │   └── run_detection.py
+│   ├── exp_003_tracking/
+│   │   ├── __pycache__/
+│   │   ├── evaluate_tracking.py
+│   │   └── run_tracking.py
+│   ├── exp_004_events/
+│   │   └── README.md
+│   └── README.md
 ├── models/
-│
+├── notebooks/
 ├── results/
-│
+│   ├── exp_001/
+│   ├── exp_002/
+│   ├── exp_003/
+│   ├── metrics/
+│   ├── predictions/
+│   └── README.md
 ├── scripts/
-│
-└── assets/
+├── src/
+│   ├── cameras/
+│   │   ├── __pycache__/
+│   │   └── camera_manager.py
+│   ├── detection/
+│   │   ├── __pycache__/
+│   │   └── detector.py
+│   ├── memory/
+│   ├── observer/
+│   ├── sensors/
+│   ├── spatial/
+│   ├── trafficvision/
+│   │   ├── __init__.py
+│   │   ├── config.py
+│   │   └── counting.py
+│   ├── utils/
+│   │   ├── __pycache__/
+│   │   ├── config_loader copy.py
+│   │   └── config_loader.py
+│   ├── validation/
+│   │   ├── __pycache__/
+│   │   └── training_validator.py
+│   └── vision/
+├── tests/
+├── .gitignore
+├── main.py
+└── README.md
 ```
 
 A estrutura poderá ser modificada conforme os componentes forem implementados.

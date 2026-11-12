@@ -1,0 +1,9 @@
+run_name,confidence,image_size,frames_processed,total_detections,unique_track_ids,average_detections_per_frame,inference_fps,processing_fps,total_processing_time_seconds,prediction_file
+run_01_conf_0p10_img_640,0.1,640,300,2341,43,7.8033,5.5738,4.8217,62.2185,L:\code\observador\results\exp_004\run_01_conf_0p10_img_640\tracking_results.csv
+run_02_conf_0p15_img_640,0.15,640,300,2158,46,7.1933,5.857,5.3667,55.9002,L:\code\observador\results\exp_004\run_02_conf_0p15_img_640\tracking_results.csv
+run_03_conf_0p20_img_640,0.2,640,300,2077,47,6.9233,5.963,5.453,55.0161,L:\code\observador\results\exp_004\run_03_conf_0p20_img_640\tracking_results.csv
+run_04_conf_0p25_img_640,0.25,640,300,1959,46,6.53,5.4782,5.0419,59.5013,L:\code\observador\results\exp_004\run_04_conf_0p25_img_640\tracking_results.csv
+run_05_conf_0p10_img_960,0.1,960,300,3765,71,12.55,3.2594,3.0714,97.6742,L:\code\observador\results\exp_004\run_05_conf_0p10_img_960\tracking_results.csv
+run_06_conf_0p15_img_960,0.15,960,300,3588,71,11.96,3.3697,3.2031,93.6592,L:\code\observador\results\exp_004\run_06_conf_0p15_img_960\tracking_results.csv
+run_07_conf_0p20_img_960,0.2,960,300,3417,70,11.39,3.2007,3.0469,98.4596,L:\code\observador\results\exp_004\run_07_conf_0p20_img_960\tracking_results.csv
+run_08_conf_0p25_img_960,0.25,960,300,3238,74,10.7933,3.4622,3.2889,91.2157,L:\code\observador\results\exp_004\run_08_conf_0p25_img_960\tracking_results.csv

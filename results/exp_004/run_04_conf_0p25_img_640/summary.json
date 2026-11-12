@@ -1,0 +1,22 @@
+{
+  "status": "completed",
+  "experiment": "EXP-004",
+  "model": "yolo26n.pt",
+  "tracker": "bytetrack.yaml",
+  "confidence": 0.25,
+  "image_size": 640,
+  "classes": [
+    0
+  ],
+  "frames_available": 600,
+  "frames_processed": 300,
+  "total_detections": 1959,
+  "unique_track_ids": 46,
+  "average_detections_per_frame": 6.53,
+  "total_inference_time_seconds": 54.7626,
+  "average_inference_time_seconds": 0.182542,
+  "inference_fps": 5.4782,
+  "total_processing_time_seconds": 59.5013,
+  "processing_fps": 5.0419,
+  "prediction_file": "L:\\code\\observador\\results\\exp_004\\run_04_conf_0p25_img_640\\tracking_results.csv"
+}

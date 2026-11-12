@@ -1,0 +1,125 @@
+{
+  "experiment": "EXP-004",
+  "status": "completed",
+  "sequence": "MOT17-02-DPM",
+  "frames_evaluated": 300,
+  "benchmark": "MOT17",
+  "preprocessing_enabled": true,
+  "metrics_requested": [
+    "HOTA",
+    "CLEAR",
+    "Identity"
+  ],
+  "runs_evaluated": 8,
+  "runs": [
+    {
+      "run_name": "run_01_conf_0p10_img_640",
+      "confidence": 0.1,
+      "image_size": 640,
+      "prediction_count": 2341,
+      "unique_track_ids": 43,
+      "prediction_file": "L:\\code\\observador\\results\\exp_004\\run_01_conf_0p10_img_640\\tracking_results.csv",
+      "diagnostic_file": "L:\\code\\observador\\results\\exp_004\\evaluation\\diagnostics\\run_01_conf_0p10_img_640\\diagnostic_summary.json"
+    },
+    {
+      "run_name": "run_02_conf_0p15_img_640",
+      "confidence": 0.15,
+      "image_size": 640,
+      "prediction_count": 2158,
+      "unique_track_ids": 46,
+      "prediction_file": "L:\\code\\observador\\results\\exp_004\\run_02_conf_0p15_img_640\\tracking_results.csv",
+      "diagnostic_file": "L:\\code\\observador\\results\\exp_004\\evaluation\\diagnostics\\run_02_conf_0p15_img_640\\diagnostic_summary.json"
+    },
+    {
+      "run_name": "run_03_conf_0p20_img_640",
+      "confidence": 0.2,
+      "image_size": 640,
+      "prediction_count": 2077,
+      "unique_track_ids": 47,
+      "prediction_file": "L:\\code\\observador\\results\\exp_004\\run_03_conf_0p20_img_640\\tracking_results.csv",
+      "diagnostic_file": "L:\\code\\observador\\results\\exp_004\\evaluation\\diagnostics\\run_03_conf_0p20_img_640\\diagnostic_summary.json"
+    },
+    {
+      "run_name": "run_04_conf_0p25_img_640",
+      "confidence": 0.25,
+      "image_size": 640,
+      "prediction_count": 1959,
+      "unique_track_ids": 46,
+      "prediction_file": "L:\\code\\observador\\results\\exp_004\\run_04_conf_0p25_img_640\\tracking_results.csv",
+      "diagnostic_file": "L:\\code\\observador\\results\\exp_004\\evaluation\\diagnostics\\run_04_conf_0p25_img_640\\diagnostic_summary.json"
+    },
+    {
+      "run_name": "run_05_conf_0p10_img_960",
+      "confidence": 0.1,
+      "image_size": 960,
+      "prediction_count": 3765,
+      "unique_track_ids": 71,
+      "prediction_file": "L:\\code\\observador\\results\\exp_004\\run_05_conf_0p10_img_960\\tracking_results.csv",
+      "diagnostic_file": "L:\\code\\observador\\results\\exp_004\\evaluation\\diagnostics\\run_05_conf_0p10_img_960\\diagnostic_summary.json"
+    },
+    {
+      "run_name": "run_06_conf_0p15_img_960",
+      "confidence": 0.15,
+      "image_size": 960,
+      "prediction_count": 3588,
+      "unique_track_ids": 71,
+      "prediction_file": "L:\\code\\observador\\results\\exp_004\\run_06_conf_0p15_img_960\\tracking_results.csv",
+      "diagnostic_file": "L:\\code\\observador\\results\\exp_004\\evaluation\\diagnostics\\run_06_conf_0p15_img_960\\diagnostic_summary.json"
+    },
+    {
+      "run_name": "run_07_conf_0p20_img_960",
+      "confidence": 0.2,
+      "image_size": 960,
+      "prediction_count": 3417,
+      "unique_track_ids": 70,
+      "prediction_file": "L:\\code\\observador\\results\\exp_004\\run_07_conf_0p20_img_960\\tracking_results.csv",
+      "diagnostic_file": "L:\\code\\observador\\results\\exp_004\\evaluation\\diagnostics\\run_07_conf_0p20_img_960\\diagnostic_summary.json"
+    },
+    {
+      "run_name": "run_08_conf_0p25_img_960",
+      "confidence": 0.25,
+      "image_size": 960,
+      "prediction_count": 3238,
+      "unique_track_ids": 74,
+      "prediction_file": "L:\\code\\observador\\results\\exp_004\\run_08_conf_0p25_img_960\\tracking_results.csv",
+      "diagnostic_file": "L:\\code\\observador\\results\\exp_004\\evaluation\\diagnostics\\run_08_conf_0p25_img_960\\diagnostic_summary.json"
+    }
+  ],
+  "trackeval_output_dir": "L:\\code\\observador\\results\\exp_004\\evaluation\\trackeval\\output",
+  "trackeval_log": "L:\\code\\observador\\results\\exp_004\\evaluation\\trackeval_execution.log",
+  "trackeval_files": [
+    "trackeval\\output\\run_01_conf_0p10_img_640\\pedestrian_detailed.csv",
+    "trackeval\\output\\run_01_conf_0p10_img_640\\pedestrian_plot.pdf",
+    "trackeval\\output\\run_01_conf_0p10_img_640\\pedestrian_plot.png",
+    "trackeval\\output\\run_01_conf_0p10_img_640\\pedestrian_summary.txt",
+    "trackeval\\output\\run_02_conf_0p15_img_640\\pedestrian_detailed.csv",
+    "trackeval\\output\\run_02_conf_0p15_img_640\\pedestrian_plot.pdf",
+    "trackeval\\output\\run_02_conf_0p15_img_640\\pedestrian_plot.png",
+    "trackeval\\output\\run_02_conf_0p15_img_640\\pedestrian_summary.txt",
+    "trackeval\\output\\run_03_conf_0p20_img_640\\pedestrian_detailed.csv",
+    "trackeval\\output\\run_03_conf_0p20_img_640\\pedestrian_plot.pdf",
+    "trackeval\\output\\run_03_conf_0p20_img_640\\pedestrian_plot.png",
+    "trackeval\\output\\run_03_conf_0p20_img_640\\pedestrian_summary.txt",
+    "trackeval\\output\\run_04_conf_0p25_img_640\\pedestrian_detailed.csv",
+    "trackeval\\output\\run_04_conf_0p25_img_640\\pedestrian_plot.pdf",
+    "trackeval\\output\\run_04_conf_0p25_img_640\\pedestrian_plot.png",
+    "trackeval\\output\\run_04_conf_0p25_img_640\\pedestrian_summary.txt",
+    "trackeval\\output\\run_05_conf_0p10_img_960\\pedestrian_detailed.csv",
+    "trackeval\\output\\run_05_conf_0p10_img_960\\pedestrian_plot.pdf",
+    "trackeval\\output\\run_05_conf_0p10_img_960\\pedestrian_plot.png",
+    "trackeval\\output\\run_05_conf_0p10_img_960\\pedestrian_summary.txt",
+    "trackeval\\output\\run_06_conf_0p15_img_960\\pedestrian_detailed.csv",
+    "trackeval\\output\\run_06_conf_0p15_img_960\\pedestrian_plot.pdf",
+    "trackeval\\output\\run_06_conf_0p15_img_960\\pedestrian_plot.png",
+    "trackeval\\output\\run_06_conf_0p15_img_960\\pedestrian_summary.txt",
+    "trackeval\\output\\run_07_conf_0p20_img_960\\pedestrian_detailed.csv",
+    "trackeval\\output\\run_07_conf_0p20_img_960\\pedestrian_plot.pdf",
+    "trackeval\\output\\run_07_conf_0p20_img_960\\pedestrian_plot.png",
+    "trackeval\\output\\run_07_conf_0p20_img_960\\pedestrian_summary.txt",
+    "trackeval\\output\\run_08_conf_0p25_img_960\\pedestrian_detailed.csv",
+    "trackeval\\output\\run_08_conf_0p25_img_960\\pedestrian_plot.pdf",
+    "trackeval\\output\\run_08_conf_0p25_img_960\\pedestrian_plot.png",
+    "trackeval\\output\\run_08_conf_0p25_img_960\\pedestrian_summary.txt"
+  ],
+  "note": "As métricas oficiais devem ser consultadas nos arquivos gerados pelo TrackEval. As contagens diagnósticas não representam TP, FP ou FN."
+}

@@ -1,0 +1,9 @@
+﻿run_name,confidence,image_size,prediction_count,unique_track_ids,prediction_file,diagnostic_file
+run_01_conf_0p10_img_640,0.1,640,2341,43,L:\code\observador\results\exp_004\run_01_conf_0p10_img_640\tracking_results.csv,L:\code\observador\results\exp_004\evaluation\diagnostics\run_01_conf_0p10_img_640\diagnostic_summary.json
+run_02_conf_0p15_img_640,0.15,640,2158,46,L:\code\observador\results\exp_004\run_02_conf_0p15_img_640\tracking_results.csv,L:\code\observador\results\exp_004\evaluation\diagnostics\run_02_conf_0p15_img_640\diagnostic_summary.json
+run_03_conf_0p20_img_640,0.2,640,2077,47,L:\code\observador\results\exp_004\run_03_conf_0p20_img_640\tracking_results.csv,L:\code\observador\results\exp_004\evaluation\diagnostics\run_03_conf_0p20_img_640\diagnostic_summary.json
+run_04_conf_0p25_img_640,0.25,640,1959,46,L:\code\observador\results\exp_004\run_04_conf_0p25_img_640\tracking_results.csv,L:\code\observador\results\exp_004\evaluation\diagnostics\run_04_conf_0p25_img_640\diagnostic_summary.json
+run_05_conf_0p10_img_960,0.1,960,3765,71,L:\code\observador\results\exp_004\run_05_conf_0p10_img_960\tracking_results.csv,L:\code\observador\results\exp_004\evaluation\diagnostics\run_05_conf_0p10_img_960\diagnostic_summary.json
+run_06_conf_0p15_img_960,0.15,960,3588,71,L:\code\observador\results\exp_004\run_06_conf_0p15_img_960\tracking_results.csv,L:\code\observador\results\exp_004\evaluation\diagnostics\run_06_conf_0p15_img_960\diagnostic_summary.json
+run_07_conf_0p20_img_960,0.2,960,3417,70,L:\code\observador\results\exp_004\run_07_conf_0p20_img_960\tracking_results.csv,L:\code\observador\results\exp_004\evaluation\diagnostics\run_07_conf_0p20_img_960\diagnostic_summary.json
+run_08_conf_0p25_img_960,0.25,960,3238,74,L:\code\observador\results\exp_004\run_08_conf_0p25_img_960\tracking_results.csv,L:\code\observador\results\exp_004\evaluation\diagnostics\run_08_conf_0p25_img_960\diagnostic_summary.json

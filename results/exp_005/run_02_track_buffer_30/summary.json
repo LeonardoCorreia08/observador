@@ -1,0 +1,37 @@
+{
+  "status": "completed",
+  "experiment": "EXP-005A",
+  "model": "yolo26n.pt",
+  "tracker": "ByteTrack",
+  "tracker_source_yaml": "L:\\ambientes\\observador\\Lib\\site-packages\\ultralytics\\cfg\\trackers\\bytetrack.yaml",
+  "tracker_generated_yaml": "L:\\code\\observador\\results\\exp_005\\run_02_track_buffer_30\\tracker_config.yaml",
+  "tracker_parameters": {
+    "tracker_type": "bytetrack",
+    "track_high_thresh": 0.25,
+    "track_low_thresh": 0.1,
+    "new_track_thresh": 0.25,
+    "track_buffer": 30,
+    "match_thresh": 0.8,
+    "fuse_score": true
+  },
+  "track_buffer": 30,
+  "original_track_buffer": 30,
+  "confidence": 0.15,
+  "image_size": 960,
+  "classes": [
+    0
+  ],
+  "device": "cpu",
+  "device_name": "CPU",
+  "frames_available": 600,
+  "frames_processed": 300,
+  "total_detections": 3588,
+  "unique_track_ids": 71,
+  "average_detections_per_frame": 11.96,
+  "total_inference_time_seconds": 94.2975,
+  "average_inference_time_seconds": 0.314325,
+  "inference_fps": 3.1814,
+  "total_processing_time_seconds": 98.5348,
+  "processing_fps": 3.0446,
+  "prediction_file": "L:\\code\\observador\\results\\exp_005\\run_02_track_buffer_30\\tracking_results.csv"
+}

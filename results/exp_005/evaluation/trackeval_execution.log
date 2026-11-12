@@ -1,0 +1,144 @@
+
+Eval Config:
+USE_PARALLEL         : False                         
+NUM_PARALLEL_CORES   : 8                             
+BREAK_ON_ERROR       : True                          
+RETURN_ON_ERROR      : False                         
+LOG_ON_ERROR         : L:\ambientes\observador\Lib\site-packages\error_log.txt
+PRINT_RESULTS        : True                          
+PRINT_ONLY_COMBINED  : False                         
+PRINT_CONFIG         : True                          
+TIME_PROGRESS        : True                          
+DISPLAY_LESS_PROGRESS : False                         
+OUTPUT_SUMMARY       : True                          
+OUTPUT_EMPTY_CLASSES : True                          
+OUTPUT_DETAILED      : True                          
+PLOT_CURVES          : True                          
+
+MotChallenge2DBox Config:
+PRINT_CONFIG         : True                          
+GT_FOLDER            : L:\code\observador\results\exp_005\evaluation\trackeval\gt
+TRACKERS_FOLDER      : L:\code\observador\results\exp_005\evaluation\trackeval\trackers
+OUTPUT_FOLDER        : ['L:\\code\\observador\\results\\exp_005\\evaluation\\trackeval\\output']
+TRACKERS_TO_EVAL     : ['run_01_track_buffer_15', 'run_02_track_buffer_30', 'run_03_track_buffer_60']
+CLASSES_TO_EVAL      : ['pedestrian']                
+BENCHMARK            : MOT17                         
+SPLIT_TO_EVAL        : train                         
+INPUT_AS_ZIP         : False                         
+DO_PREPROC           : True                          
+TRACKER_SUB_FOLDER   : data                          
+OUTPUT_SUB_FOLDER    :                               
+TRACKER_DISPLAY_NAMES : None                          
+SEQMAP_FOLDER        : None                          
+SEQMAP_FILE          : ['L:\\code\\observador\\results\\exp_005\\evaluation\\trackeval\\sequence_map.txt']
+SEQ_INFO             : None                          
+GT_LOC_FORMAT        : {gt_folder}/{seq}/gt/gt.txt   
+SKIP_SPLIT_FOL       : False                         
+
+CLEAR Config:
+METRICS              : ['HOTA', 'CLEAR', 'Identity'] 
+THRESHOLD            : 0.5                           
+PRINT_CONFIG         : True                          
+
+Identity Config:
+METRICS              : ['HOTA', 'CLEAR', 'Identity'] 
+THRESHOLD            : 0.5                           
+PRINT_CONFIG         : True                          
+
+Evaluating 3 tracker(s) on 1 sequence(s) for 1 class(es) on MotChallenge2DBox dataset using the following metrics: HOTA, CLEAR, Identity, Count
+
+
+Evaluating run_01_track_buffer_15
+
+    MotChallenge2DBox.get_raw_seq_data(run_01_track_buffer_15, MOT17-02-DPM) 0.1554 sec
+    MotChallenge2DBox.get_preprocessed_seq_data(pedestrian)                0.1442 sec
+    HOTA.eval_sequence()                                                   0.1860 sec
+    CLEAR.eval_sequence()                                                  0.0304 sec
+    Identity.eval_sequence()                                               0.0077 sec
+    Count.eval_sequence()                                                  0.0000 sec
+1 eval_sequence(MOT17-02-DPM, run_01_track_buffer_15)                    0.5262 sec
+
+All sequences for run_01_track_buffer_15 finished in 0.52 seconds
+
+HOTA: run_01_track_buffer_15-pedestrianHOTA      DetA      AssA      DetRe     DetPr     AssRe     AssPr     LocA      OWTA      HOTA(0)   LocA(0)   HOTALocA(0)
+MOT17-02-DPM                       34.163    24.472    48.796    26.509    67.564    51.793    81.642    80.886    35.691    42.664    74.277    31.69     
+COMBINED                           34.163    24.472    48.796    26.509    67.564    51.793    81.642    80.886    35.691    42.664    74.277    31.69     
+
+CLEAR: run_01_track_buffer_15-pedestrianMOTA      MOTP      MODA      CLR_Re    CLR_Pr    MTR       PTR       MLR       sMOTA     CLR_TP    CLR_FN    CLR_FP    IDSW      MT        PT        ML        Frag      
+MOT17-02-DPM                       23.419    78.18     23.708    31.472    80.212    11.905    33.333    54.762    16.552    2728      5940      673       25        5         14        23        78        
+COMBINED                           23.419    78.18     23.708    31.472    80.212    11.905    33.333    54.762    16.552    2728      5940      673       25        5         14        23        78        
+
+Identity: run_01_track_buffer_15-pedestrianIDF1      IDR       IDP       IDTP      IDFN      IDFP      
+MOT17-02-DPM                       39.34     27.388    69.803    2374      6294      1027      
+COMBINED                           39.34     27.388    69.803    2374      6294      1027      
+
+Count: run_01_track_buffer_15-pedestrianDets      GT_Dets   IDs       GT_IDs    
+MOT17-02-DPM                       3401      8668      64        42        
+COMBINED                           3401      8668      64        42        
+
+Evaluating run_02_track_buffer_30
+
+    MotChallenge2DBox.get_raw_seq_data(run_02_track_buffer_30, MOT17-02-DPM) 0.1641 sec
+    MotChallenge2DBox.get_preprocessed_seq_data(pedestrian)                0.1413 sec
+    HOTA.eval_sequence()                                                   0.1847 sec
+    CLEAR.eval_sequence()                                                  0.0301 sec
+    Identity.eval_sequence()                                               0.0077 sec
+    Count.eval_sequence()                                                  0.0000 sec
+2 eval_sequence(MOT17-02-DPM, run_02_track_buffer_30)                    0.5303 sec
+
+All sequences for run_02_track_buffer_30 finished in 0.54 seconds
+
+HOTA: run_02_track_buffer_30-pedestrianHOTA      DetA      AssA      DetRe     DetPr     AssRe     AssPr     LocA      OWTA      HOTA(0)   LocA(0)   HOTALocA(0)
+MOT17-02-DPM                       34.405    24.609    49.193    26.638    67.751    52.208    81.651    80.869    35.93     43.01     74.272    31.945    
+COMBINED                           34.405    24.609    49.193    26.638    67.751    52.208    81.651    80.869    35.93     43.01     74.272    31.945    
+
+CLEAR: run_02_track_buffer_30-pedestrianMOTA      MOTP      MODA      CLR_Re    CLR_Pr    MTR       PTR       MLR       sMOTA     CLR_TP    CLR_FN    CLR_FP    IDSW      MT        PT        ML        Frag      
+MOT17-02-DPM                       23.708    78.157    23.973    31.645    80.487    11.905    33.333    54.762    16.796    2743      5925      665       23        5         14        23        80        
+COMBINED                           23.708    78.157    23.973    31.645    80.487    11.905    33.333    54.762    16.796    2743      5925      665       23        5         14        23        80        
+
+Identity: run_02_track_buffer_30-pedestrianIDF1      IDR       IDP       IDTP      IDFN      IDFP      
+MOT17-02-DPM                       39.964    27.838    70.804    2413      6255      995       
+COMBINED                           39.964    27.838    70.804    2413      6255      995       
+
+Count: run_02_track_buffer_30-pedestrianDets      GT_Dets   IDs       GT_IDs    
+MOT17-02-DPM                       3408      8668      62        42        
+COMBINED                           3408      8668      62        42        
+
+Evaluating run_03_track_buffer_60
+
+    MotChallenge2DBox.get_raw_seq_data(run_03_track_buffer_60, MOT17-02-DPM) 0.2001 sec
+    MotChallenge2DBox.get_preprocessed_seq_data(pedestrian)                0.1410 sec
+    HOTA.eval_sequence()                                                   0.1888 sec
+    CLEAR.eval_sequence()                                                  0.0297 sec
+    Identity.eval_sequence()                                               0.0073 sec
+    Count.eval_sequence()                                                  0.0000 sec
+3 eval_sequence(MOT17-02-DPM, run_03_track_buffer_60)                    0.5689 sec
+
+All sequences for run_03_track_buffer_60 finished in 0.58 seconds
+
+HOTA: run_03_track_buffer_60-pedestrianHOTA      DetA      AssA      DetRe     DetPr     AssRe     AssPr     LocA      OWTA      HOTA(0)   LocA(0)   HOTALocA(0)
+MOT17-02-DPM                       34.546    24.599    49.591    26.627    67.744    52.614    81.579    80.876    36.076    43.22     74.267    32.098    
+COMBINED                           34.546    24.599    49.591    26.627    67.744    52.614    81.579    80.876    36.076    43.22     74.267    32.098    
+
+CLEAR: run_03_track_buffer_60-pedestrianMOTA      MOTP      MODA      CLR_Re    CLR_Pr    MTR       PTR       MLR       sMOTA     CLR_TP    CLR_FN    CLR_FP    IDSW      MT        PT        ML        Frag      
+MOT17-02-DPM                       23.708    78.168    23.962    31.634    80.481    11.905    33.333    54.762    16.802    2742      5926      665       22        5         14        23        80        
+COMBINED                           23.708    78.168    23.962    31.634    80.481    11.905    33.333    54.762    16.802    2742      5926      665       22        5         14        23        80        
+
+Identity: run_03_track_buffer_60-pedestrianIDF1      IDR       IDP       IDTP      IDFN      IDFP      
+MOT17-02-DPM                       40.464    28.184    71.705    2443      6225      964       
+COMBINED                           40.464    28.184    71.705    2443      6225      964       
+
+Count: run_03_track_buffer_60-pedestrianDets      GT_Dets   IDs       GT_IDs    
+MOT17-02-DPM                       3407      8668      60        42        
+COMBINED                           3407      8668      60        42        
+
+Timing analysis:
+MotChallenge2DBox.get_raw_seq_data                                     0.5196 sec
+MotChallenge2DBox.get_preprocessed_seq_data                            0.4265 sec
+HOTA.eval_sequence                                                     0.5595 sec
+CLEAR.eval_sequence                                                    0.0902 sec
+Identity.eval_sequence                                                 0.0227 sec
+Count.eval_sequence                                                    0.0000 sec
+eval_sequence                                                          1.6255 sec
+Evaluator.evaluate                                                     8.1610 sec
+

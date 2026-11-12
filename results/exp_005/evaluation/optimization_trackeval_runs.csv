@@ -1,0 +1,4 @@
+﻿run_name,track_buffer,confidence,image_size,prediction_count,unique_track_ids,prediction_file,diagnostic_file
+run_01_track_buffer_15,15,0.15,960,3581,73,L:\code\observador\results\exp_005\run_01_track_buffer_15\tracking_results.csv,L:\code\observador\results\exp_005\evaluation\diagnostics\run_01_track_buffer_15\diagnostic_summary.json
+run_02_track_buffer_30,30,0.15,960,3588,71,L:\code\observador\results\exp_005\run_02_track_buffer_30\tracking_results.csv,L:\code\observador\results\exp_005\evaluation\diagnostics\run_02_track_buffer_30\diagnostic_summary.json
+run_03_track_buffer_60,60,0.15,960,3588,68,L:\code\observador\results\exp_005\run_03_track_buffer_60\tracking_results.csv,L:\code\observador\results\exp_005\evaluation\diagnostics\run_03_track_buffer_60\diagnostic_summary.json

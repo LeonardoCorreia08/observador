@@ -1,0 +1,63 @@
+{
+  "experiment": "EXP-005A",
+  "status": "completed",
+  "sequence": "MOT17-02-DPM",
+  "frames_evaluated": 300,
+  "benchmark": "MOT17",
+  "preprocessing_enabled": true,
+  "metrics_requested": [
+    "HOTA",
+    "CLEAR",
+    "Identity"
+  ],
+  "runs_evaluated": 3,
+  "runs": [
+    {
+      "run_name": "run_01_track_buffer_15",
+      "track_buffer": 15,
+      "confidence": 0.15,
+      "image_size": 960,
+      "prediction_count": 3581,
+      "unique_track_ids": 73,
+      "prediction_file": "L:\\code\\observador\\results\\exp_005\\run_01_track_buffer_15\\tracking_results.csv",
+      "diagnostic_file": "L:\\code\\observador\\results\\exp_005\\evaluation\\diagnostics\\run_01_track_buffer_15\\diagnostic_summary.json"
+    },
+    {
+      "run_name": "run_02_track_buffer_30",
+      "track_buffer": 30,
+      "confidence": 0.15,
+      "image_size": 960,
+      "prediction_count": 3588,
+      "unique_track_ids": 71,
+      "prediction_file": "L:\\code\\observador\\results\\exp_005\\run_02_track_buffer_30\\tracking_results.csv",
+      "diagnostic_file": "L:\\code\\observador\\results\\exp_005\\evaluation\\diagnostics\\run_02_track_buffer_30\\diagnostic_summary.json"
+    },
+    {
+      "run_name": "run_03_track_buffer_60",
+      "track_buffer": 60,
+      "confidence": 0.15,
+      "image_size": 960,
+      "prediction_count": 3588,
+      "unique_track_ids": 68,
+      "prediction_file": "L:\\code\\observador\\results\\exp_005\\run_03_track_buffer_60\\tracking_results.csv",
+      "diagnostic_file": "L:\\code\\observador\\results\\exp_005\\evaluation\\diagnostics\\run_03_track_buffer_60\\diagnostic_summary.json"
+    }
+  ],
+  "trackeval_output_dir": "L:\\code\\observador\\results\\exp_005\\evaluation\\trackeval\\output",
+  "trackeval_log": "L:\\code\\observador\\results\\exp_005\\evaluation\\trackeval_execution.log",
+  "trackeval_files": [
+    "trackeval\\output\\run_01_track_buffer_15\\pedestrian_detailed.csv",
+    "trackeval\\output\\run_01_track_buffer_15\\pedestrian_plot.pdf",
+    "trackeval\\output\\run_01_track_buffer_15\\pedestrian_plot.png",
+    "trackeval\\output\\run_01_track_buffer_15\\pedestrian_summary.txt",
+    "trackeval\\output\\run_02_track_buffer_30\\pedestrian_detailed.csv",
+    "trackeval\\output\\run_02_track_buffer_30\\pedestrian_plot.pdf",
+    "trackeval\\output\\run_02_track_buffer_30\\pedestrian_plot.png",
+    "trackeval\\output\\run_02_track_buffer_30\\pedestrian_summary.txt",
+    "trackeval\\output\\run_03_track_buffer_60\\pedestrian_detailed.csv",
+    "trackeval\\output\\run_03_track_buffer_60\\pedestrian_plot.pdf",
+    "trackeval\\output\\run_03_track_buffer_60\\pedestrian_plot.png",
+    "trackeval\\output\\run_03_track_buffer_60\\pedestrian_summary.txt"
+  ],
+  "note": "As métricas oficiais devem ser consultadas nos arquivos gerados pelo TrackEval. O CSV de execuções contém dados operacionais e diagnósticos, não métricas oficiais."
+}

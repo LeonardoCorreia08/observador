@@ -1,0 +1,4 @@
+﻿run_name,track_buffer,confidence,image_size,frames_processed,total_detections,unique_track_ids,inference_fps,processing_fps,total_processing_time_seconds,prediction_file,tracker_generated_yaml
+run_01_track_buffer_15,15,0.15,960,300,3581,73,3.4127,3.1093,96.4836,L:\code\observador\results\exp_005\run_01_track_buffer_15\tracking_results.csv,L:\code\observador\results\exp_005\run_01_track_buffer_15\tracker_config.yaml
+run_02_track_buffer_30,30,0.15,960,300,3588,71,3.1814,3.0446,98.5348,L:\code\observador\results\exp_005\run_02_track_buffer_30\tracking_results.csv,L:\code\observador\results\exp_005\run_02_track_buffer_30\tracker_config.yaml
+run_03_track_buffer_60,60,0.15,960,300,3588,68,3.78,3.5972,83.398,L:\code\observador\results\exp_005\run_03_track_buffer_60\tracking_results.csv,L:\code\observador\results\exp_005\run_03_track_buffer_60\tracker_config.yaml
